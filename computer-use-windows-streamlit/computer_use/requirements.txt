@@ -1,0 +1,12 @@
+streamlit>=1.38.0
+anthropic[bedrock,vertex]>=0.37.1
+jsonschema==4.22.0
+boto3>=1.28.57
+google-auth<3,>=2
+pywin32>=306
+psutil>=5.9.0
+wmi>=1.5.1
+pyautogui>=0.9.54
+keyboard>=0.13.5
+mouse>=0.7.1
+Pillow>=10.0.0
