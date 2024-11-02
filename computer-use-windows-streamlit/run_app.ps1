@@ -8,8 +8,11 @@ if (Test-Path "$env:ProgramData\anaconda3") {
 # Activate conda environment
 conda activate computer_use
 
+# Change to the streamlit app directory
+cd computer-use-windows-streamlit
+
 # Set PYTHONPATH to current directory
 $env:PYTHONPATH = "."
 
 # Run the Streamlit app
-python -m streamlit run computer_use_demo/streamlit.py
+python -m streamlit run computer_use\streamlit.py

@@ -23,7 +23,7 @@ from anthropic.types.beta import (
 )
 
 # Change to absolute imports
-from computer_use_demo.tools import BashTool, ComputerTool, EditTool, ToolCollection, ToolResult
+from computer_use.tools import BashTool, ComputerTool, EditTool, ToolCollection, ToolResult
 
 BETA_FLAG = "computer-use-2024-10-22"
 

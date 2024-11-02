@@ -23,12 +23,12 @@ from anthropic.types.tool_use_block import ToolUseBlock
 from streamlit.delta_generator import DeltaGenerator
 
 # Change to absolute imports
-from computer_use_demo.loop import (
+from computer_use.loop import (
     PROVIDER_TO_DEFAULT_MODEL_NAME,
     APIProvider,
     sampling_loop,
 )
-from computer_use_demo.tools import ToolResult
+from computer_use.tools import ToolResult
 
 # Use appropriate config directory for Windows vs Unix
 CONFIG_DIR = Path(os.path.expandvars("%APPDATA%\\anthropic")) if platform.system() == "Windows" else Path("~/.anthropic").expanduser()

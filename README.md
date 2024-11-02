@@ -123,7 +123,7 @@ cd computer_use_windows_streamlit
 
 2. Install the required dependencies:
 ```bash
-pip install -r computer_use/requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Configuration
