@@ -11,7 +11,7 @@ Integrating Windows + Python + Anthropic's Computer Use API for the development 
 
 This is the Streamlit version of a Windows automation platform that combines Python's extensive system control capabilities with Anthropic's Claude AI. This project adapts [Anthropic's computer-use-demo](https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo) specifically for Windows environments.
 
-![Streamlit Interface](./images/Streamlit%20Launch%20Window.png)
+![Streamlit Interface](./screenshots/Streamlit%20Launch%20Window.png)
 
 
 ## Important Implementation Notes
@@ -90,35 +90,12 @@ This is a very early release intended for developers only. There are many securi
 - Configurable image history management
 - Streamlit web interface for remote or local access
 
-## Deployment Recommendations
-
-### Local Development
-Not recommended for regular use due to:
-- Lack of isolation between API and interface
-- Potential for recursive interactions
-- Security considerations
-
-### Recommended Setup
-1. Deploy on a virtual machine (tested with VMware)
-2. Access remotely through web browser
-3. Use on an isolated network
-4. Use a console window with consistent dimensions
-5. Implement additional security measures as needed
-
-### Display Configuration
-For optimal functionality when operating remotely:
-1. Open a console window on the target system
-2. Position it appropriately for automation tasks
-3. Maintain consistent window dimensions
-4. Avoid resizing during operation
-5. Consider using fixed console dimensions for reliability
-
 ## Installation
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/computer_use_windows_streamlit.git
-cd computer_use_windows_streamlit
+git clone https://github.com/yourusername/computer-use-windows.git
+cd computer-use-windows
 ```
 
 2. Install the required dependencies:
@@ -137,59 +114,54 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Run the application using the provided batch script:
+1. Navigate to the Streamlit application directory:
 ```bash
-run_app.bat
+cd computer-use-windows-streamlit
 ```
-Or using PowerShell:
+
+2. Run the application using PowerShell:
 ```powershell
 .\run_app.ps1
 ```
 
-2. Access the interface through your browser:
+3. Access the interface through your browser:
    - Local access: `http://localhost:8501` (not recommended for regular use)
    - Remote access: Use the VM's IP address or hostname
 
-3. For remote operation:
+4. For remote operation:
    - Open a console window on the target system
    - Position it appropriately for automation tasks
    - Maintain consistent window dimensions
    - Avoid resizing during operation
 
-4. Select your preferred API provider and configure the necessary credentials
+5. Select your preferred API provider and configure the necessary credentials
 
-5. Start interacting with Claude to control your computer
-
-## Technical Architecture
-
-The project combines several key components:
-
-1. **Core Automation Layer**
-   - Python-based Windows API integration
-   - System event handling and monitoring
-   - Process and file system management
-   - Screen capture and image processing
-
-2. **AI Integration Layer**
-   - Claude API communication
-   - Context management
-   - Command interpretation
-   - System state analysis
+6. Start interacting with Claude to control your computer
 
 ## Project Structure
 
 ```
-computer_use_windows_streamlit/
-├── computer_use/           # Core application code
-│   ├── tools/             # Windows automation tools
-│   │   ├── base.py       # Base tool interfaces
-│   │   ├── computer.py   # System operations
-│   │   └── edit.py      # File operations
-│   ├── loop.py           # AI interaction loop
-│   ├── streamlit.py      # Web interface
-│   └── requirements.txt  # Dependencies
-├── run_app.bat           # Windows batch launcher
-└── run_app.ps1           # PowerShell launcher
+computer-use-windows/
+├── computer-use-windows-streamlit/    # Main application directory
+│   ├── computer_use/                  # Core application code
+│   │   ├── tools/                     # Automation tools
+│   │   │   ├── base.py               # Base tool interfaces
+│   │   │   ├── bash.py               # Shell command tools
+│   │   │   ├── collection.py         # Tool collections
+│   │   │   ├── computer.py           # System operations
+│   │   │   ├── edit.py               # File operations
+│   │   │   └── run.py                # Command execution
+│   │   ├── loop.py                   # AI interaction loop
+│   │   └── streamlit.py              # Web interface
+│   ├── tests/                         # Test suite
+│   │   ├── tools/                     # Tool tests
+│   │   ├── conftest.py               # Test configuration
+│   │   ├── loop_test.py              # Loop tests
+│   │   └── streamlit_test.py         # Interface tests
+│   └── run_app.ps1                    # PowerShell launcher
+├── screenshots/                        # Application screenshots
+├── requirements.txt                    # Project dependencies
+└── README.md                          # This file
 ```
 
 ## Development Status
