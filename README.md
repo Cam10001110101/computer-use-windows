@@ -2,17 +2,11 @@
 Integrating Windows + Python + Anthropic's Computer Use API for the development of agentic desktop applications.
 
 
-# Other Versions
-- LangChain Agent - Soon
+# Versions
+- Streamlit - [x]
+- LangChain Agent - [x]
 - Voice Control - Soon
-
-
-# Computer Use Windows Streamlit Version
-
-This is the Streamlit version of a Windows automation platform that combines Python's extensive system control capabilities with Anthropic's Claude AI. This project adapts [Anthropic's computer-use-demo](https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo) specifically for Windows environments.
-
-![Streamlit Interface](./screenshots/Streamlit%20Launch%20Window.png)
-
+- PrivateOS - tbd
 
 ## Important Implementation Notes
 
