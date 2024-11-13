@@ -1,0 +1,29 @@
+# Core Dependencies
+langchain
+langchain-anthropic
+python-dotenv
+pydantic
+
+# GUI
+PyQt5
+
+# System Interaction
+pyautogui
+Pillow  # Required for screenshots
+
+# API Integrations
+duckduckgo-search
+tavily-python
+wikipedia
+firecrawl  # Version may need adjustment
+
+# Utilities
+PyYAML  # For config.yaml
+pytest  # For testing
+python-markdown  # For markdown conversion
+requests  # For API calls
+beautifulsoup4  # For web scraping
+typing-extensions  # For type hints
+
+# Security
+cryptography  # For secure handling of sensitive data

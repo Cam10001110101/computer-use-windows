@@ -23,6 +23,7 @@ from Tools.FirecrawlTool import get_firecrawl_tool
 from Tools.computer import ComputerTool
 from Tools.bash import BashTool
 from Tools.edit import EditTool
+from Tools.DateTimeTool import DateTimeTool
 from Tools.collection import ToolCollection
 
 # Set up SQLite caching
@@ -67,7 +68,8 @@ def setup_graph():
     tool_collection = ToolCollection(
         computer_tool=ComputerTool(),
         bash_tool=BashTool(),
-        edit_tool=EditTool()
+        edit_tool=EditTool(),
+        datetime_tool=DateTimeTool()
     )
     
     # Convert tool collection to LangChain format
@@ -92,7 +94,7 @@ def setup_graph():
         temperature=config['models']['anthropic']['temperature'],
         model_kwargs={
             "system": """You have access to computer use tools that allow you to interact with the computer.
-            You can use the mouse, keyboard, take screenshots, edit files, and run bash commands.
+            You can use the mouse, keyboard, take screenshots, edit files, run bash commands, and get the current date/time.
             Always verify the results of your actions before proceeding to the next step."""
         }
     )

@@ -24,6 +24,9 @@ text_edit_style = """
         border: 1px solid #3d3d3d;
         border-radius: 3px;
         padding: 5px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 12pt;
+        line-height: 1.5;
     }
 """
 
@@ -56,12 +59,15 @@ class ModernWidget(QWidget):
             QWidget {
                 background-color: #1e1e1e;
                 color: #ffffff;
+                font-family: 'Segoe UI', Arial, sans-serif;
             }
             QLabel {
                 color: #ffffff;
+                font-family: 'Segoe UI', Arial, sans-serif;
             }
             QCheckBox {
                 color: #ffffff;
+                font-family: 'Segoe UI', Arial, sans-serif;
             }
             QCheckBox::indicator {
                 width: 13px;

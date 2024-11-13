@@ -3,15 +3,17 @@ from .base import BaseAnthropicTool, ToolResult
 from .computer import ComputerTool
 from .edit import EditTool
 from .bash import BashTool
+from .DateTimeTool import DateTimeTool
 
 class ToolCollection:
     """Collection of computer use tools."""
     
-    def __init__(self, computer_tool: ComputerTool, bash_tool: BashTool, edit_tool: EditTool):
+    def __init__(self, computer_tool: ComputerTool, bash_tool: BashTool, edit_tool: EditTool, datetime_tool: DateTimeTool):
         self.tools = {
             computer_tool.name: computer_tool,
             bash_tool.name: bash_tool,
             edit_tool.name: edit_tool,
+            datetime_tool.name: datetime_tool,
         }
 
     def to_params(self) -> List[Dict[str, Any]]:
