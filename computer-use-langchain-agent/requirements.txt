@@ -27,3 +27,4 @@ typing-extensions  # For type hints
 
 # Security
 cryptography  # For secure handling of sensitive data
+urllib3>=2.6.0 # not directly required, pinned by Snyk to avoid a vulnerability
